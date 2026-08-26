@@ -1,0 +1,34 @@
+[project]
+name = "probekit"
+version = "0.1.0"
+description = "Known-good primitives for linear-probe + steering experiments on HF language models"
+requires-python = ">=3.12"
+dependencies = [
+  "torch>=2.8",
+  "transformers==4.57.*",
+  "accelerate",
+  "safetensors",
+  "huggingface_hub[cli]",
+  "hf_transfer",
+  "datasets",
+  "scikit-learn",
+  "numpy",
+  "scipy",
+  "pandas",
+  "matplotlib",
+  "pyyaml",
+  "tqdm",
+  "pytest",
+  "python-pptx",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["probekit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.npz
+*.pt
+outputs/
+.secrets/
+.env*
